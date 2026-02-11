@@ -1,0 +1,89 @@
+/* --- CONFIGURATION --- */
+:root {
+    --primary: #2563eb;
+    --dark: #0f172a;
+    --text: #334155;
+    --bg: #f1f5f9;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* --- GRILLE & CARTES --- */
+.container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+
+.card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Important pour que l'image ne dépasse pas des bords arrondis */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover { transform: translateY(-8px); }
+
+/* --- STYLE DES IMAGES --- */
+.card-image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #eee; /* Couleur d'attente si l'image ne charge pas */
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit le cadre sans être écrasée */
+    transition: transform 0.5s ease;
+}
+
+.card:hover .project-img {
+    transform: scale(1.1); /* Petit effet de zoom au survol */
+}
+
+/* --- TEXTE ET BOUTONS --- */
+.card-content { padding: 20px; flex-grow: 1; }
+.badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: var(--primary);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.btn-main {
+    display: block;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+footer { text-align: center; padding: 40px; color: #64748b; }
