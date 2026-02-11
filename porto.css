@@ -18,7 +18,7 @@ body {
 
 /* --- HEADER --- */
 header {
-    background-color: var(--dark);
+    background-color: #a981b5 ;
     color: var(--white);
     padding: 80px 20px;
     text-align: center;
@@ -44,7 +44,7 @@ header {
 /* --- STYLE DES IMAGES --- */
 .card-image-container {
     width: 100%;
-    height: 200px;
+    hzrorpight: 200px;
     overflow: hidden;
     background-color: #eee; /* Couleur d'attente si l'image ne charge pas */
 }
